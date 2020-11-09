@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title><ui:insert name="titulo"></ui:insert></title>
+    </h:head>
+    <h:body style="margin: 0px;">
+            <h:form id="formMenu" prependId="false">
+                <div class="ui-g-12 ui-md-2" style="height: 100vh; background-color: #bfc9db; border: solid 1px #828a99;">
+                    <p:growl>
+                        <p:autoUpdate />
+                    </p:growl>
+                    <p:panelMenu style="display: contents; position: relative;">
+                        <p:submenu label="Alunos">
+                            <p:menuitem value="Listar" action="#{controleAluno.listar()}" ajax="false" icon="pi pi-file" />
+                        </p:submenu>
+                        <p:submenu label="Cursos">
+                            <p:menuitem value="Listar" action="#{controleCurso.listar()}" ajax="false" icon="pi pi-file" />
+                        </p:submenu>
+                        <p:submenu label="Disciplinas">
+                            <p:menuitem value="Listar" action="#{controleDisciplina.listar()}" ajax="false" icon="pi pi-file" />
+                        </p:submenu>
+                        <p:submenu label="Especialidades">
+                            <p:menuitem value="Listar" action="#{controleEspecialidade.listar()}" ajax="false" icon="pi pi-file" />
+                        </p:submenu>
+                        <p:submenu label="Instituições">
+                            <p:menuitem value="Listar" action="#{controleInstituicao.listar()}" ajax="false" icon="pi pi-file" />
+                        </p:submenu>
+                        <p:submenu label="Notas">
+                            <p:menuitem value="Listar" action="#{controleNota.listar()}" ajax="false" icon="pi pi-file" />
+                        </p:submenu>
+                        <p:submenu label="Professores">
+                            <p:menuitem value="Listar" action="#{controleProfessor.listar()}" ajax="false" icon="pi pi-file" />
+                        </p:submenu>               
+                    </p:panelMenu>
+                </div>
+
+            </h:form>
+            <div class="ui-g-12 ui-md-10 ui-g-nopad">
+                <ui:insert name="conteudo"/>
+            </div>
+    </h:body>
+
+</html>
