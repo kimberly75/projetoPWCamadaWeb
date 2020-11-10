@@ -37,14 +37,10 @@ public class GenericDAO<TIPO> implements Serializable {
     }  
     
     public void persist(TIPO obj) throws Exception {
-        System.out.println(((Professor) obj).toString());
-        System.out.println(((Professor) obj).getEspecialidade().toString());
         em.persist(obj);
     }
     
     public void merge(TIPO obj) throws Exception {
-        System.out.println(((Professor) obj).toString());
-        System.out.println(((Professor) obj).getEspecialidade().toString());
         em.merge(obj);
     }    
     

@@ -34,15 +34,23 @@
                     <p:column headerText="Conhecimentos Mínimos" >
                         <p:outputLabel value="#{obj.conhecimentosMinimos}"/>
                     </p:column>
-                    <p:column headerText="Notas" >
-                        <p:dataList value="#{obj.notas}" var="nota" type="ordered">
-                            #{nota.media}
-                        </p:dataList>
+                    <p:column headerText="notas" >
+                        <ul>
+                            <ui:repeat value="#{obj.notas}" var="nota">
+                                <li>
+                                    #{nota.media}
+                                </li>
+                            </ui:repeat>
+                        </ul>
                     </p:column>
-                    <p:column headerText="Alunos" >
-                        <p:dataList value="#{obj.alunos}" var="aluno" type="ordered">
-                            #{aluno.nome}
-                        </p:dataList>
+                    <p:column headerText="alunos" >
+                        <ul>
+                            <ui:repeat value="#{obj.alunos.toArray()}" var="aluno">
+                                <li>
+                                    #{aluno.nome}
+                                </li>
+                            </ui:repeat>
+                        </ul>
                     </p:column>
                     <p:column headerText="Ações" >
                         <div align="center">
@@ -100,7 +108,7 @@
                         <div class="p-field p-grid">
                             <p:outputLabel value="Nota"/>
                             <div class="p-col">
-                                <p:selectManyMenu style="width: 50%" id="selectNota" value="#{controleDisciplina.objeto.notas}"
+                                <p:selectManyMenu style="width: 50%; max-height: 100px; overflow: overlay;" id="selectNota" value="#{controleDisciplina.objeto.notas}"
                                                   filter="true" filterMatchMode="startsWith">
                                     <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
                                     <f:converter binding="#{converterNota}"/>
@@ -112,7 +120,7 @@
                         <div class="p-field p-grid">
                             <p:outputLabel value="Aluno"/>
                             <div class="p-col">
-                                <p:selectManyMenu style="width: 50%" id="selectAluno" value="#{controleDisciplina.objeto.alunos}"
+                                <p:selectManyMenu style="width: 50%; max-height: 100px; overflow: overlay;" id="selectAluno" value="#{controleDisciplina.objeto.alunos}"
                                                   filter="true" filterMatchMode="startsWith">
                                     <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
                                     <f:converter binding="#{converterAluno}"/>

@@ -104,7 +104,7 @@
                         <div class="p-field p-grid">
                             <p:outputLabel value="Especialidade"/>
                             <div class="p-col">
-                            <p:selectOneMenu style="width: 50%" id="selectEspecialidade" value="#{controleProfessor.objeto.especialidade}"
+                            <p:selectOneMenu style="width: 50%; max-height: 100px; overflow: overlay;" id="selectEspecialidade" value="#{controleProfessor.objeto.especialidade}"
                                              filter="true" filterMatchMode="startsWith">
                                 <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
                                 <f:converter binding="#{converterEspecialidade}"/>
