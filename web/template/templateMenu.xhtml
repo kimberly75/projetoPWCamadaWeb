@@ -9,7 +9,7 @@
     </h:head>
     <h:body style="margin: 0px;">
             <h:form id="formMenu" prependId="false">
-                <div class="ui-g-12 ui-md-2" style="height: 100vh; background-color: #bfc9db; border: solid 1px #828a99;">
+                <div class="ui-g-12 ui-md-2" style="height: 100%; min-height: 100vh; background-color: #bfc9db; border: solid 1px #828a99;">
                     <p:growl>
                         <p:autoUpdate />
                     </p:growl>
@@ -34,10 +34,15 @@
                         </p:submenu>
                         <p:submenu label="Professores">
                             <p:menuitem value="Listar" action="#{controleProfessor.listar()}" ajax="false" icon="pi pi-file" />
-                        </p:submenu>               
+                        </p:submenu>
+                        <p:submenu label="Marcas">
+                            <p:menuitem value="Listar" action="#{controleMarca.listar()}" ajax="false" icon="pi pi-file" />
+                        </p:submenu>
+                        <p:submenu label="Produtos">
+                            <p:menuitem value="Listar" action="#{controleProduto.listar()}" ajax="false" icon="pi pi-file" />
+                        </p:submenu>
                     </p:panelMenu>
                 </div>
-
             </h:form>
             <div class="ui-g-12 ui-md-10 ui-g-nopad">
                 <ui:insert name="conteudo"/>

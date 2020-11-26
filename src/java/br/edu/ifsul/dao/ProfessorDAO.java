@@ -6,6 +6,7 @@
 package br.edu.ifsul.dao;
 
 import br.edu.ifsul.modelo.Professor;
+import br.edu.ifsul.util.ConverterOrdem;
 import java.io.Serializable;
 import javax.ejb.Stateful;
 
@@ -18,5 +19,10 @@ public class ProfessorDAO<TIPO> extends GenericDAO<Professor> implements Seriali
     public ProfessorDAO(){
         super();
         classePersistente = Professor.class;
+        listaOrdem.add(new Ordem("id", "ID", "="));
+        listaOrdem.add(new Ordem("nome", "Nome", "like"));
+        listaOrdem.add(new Ordem("titulacao", "Titulacao", "like"));
+        ordemAtual = listaOrdem.get(1);
+        converterOrdem = new ConverterOrdem(listaOrdem);
     }
 }

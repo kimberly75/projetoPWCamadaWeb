@@ -17,8 +17,45 @@
                                      process="@this"
                                      oncomplete="PF('dlg').show();"/>
                 </div>
+                <div align="center">
+                    <p:panelGrid columns="11">
+                        <p:outputLabel value="Ordem: "/>
+                        <p:selectOneMenu value="#{controleDisciplina.dao.ordemAtual}"
+                                         id="selectOrdem"
+                                         converter="#{controleDisciplina.dao.converterOrdem}">
+                            <f:selectItems value="#{controleDisciplina.dao.listaOrdem}"
+                                           var="ord" itemValue="#{ord.atributo}"/>
+                            <p:ajax update="listagem"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="Filtro:"/>
+                        <p:inputText value="#{controleDisciplina.dao.filtro}">
+                            <p:ajax  update="listagem" event="blur"/>
+                        </p:inputText>
+                        <p:commandButton value="Filtrar" update="listagem" />
+                        <p:outputLabel value="Maximo de objetos:" />
+                        <p:inputNumber value="#{controleDisciplina.dao.maximoObjetos}" size="3" 
+                                     thousandSeparator="" decimalSeparator="" decimalPlaces="0">
+                            <p:ajax event="blur" update="listagem" />                            
+                        </p:inputNumber>
+                        <p:commandButton actionListener="#{controleDisciplina.dao.primeiro()}"
+                                         title="Primeiro"
+                                         icon="pi pi-step-backward" update="listagem"/>
+                        <p:commandButton actionListener="#{controleDisciplina.dao.anterior()}"
+                                         title="Anterior"
+                                         icon="pi pi-chevron-left" update="listagem"/>                        
+                        <p:commandButton actionListener="#{controleDisciplina.dao.proximo()}"
+                                         title="Próximo"
+                                         icon="pi pi-chevron-right" update="listagem" /> 
+                        <p:commandButton actionListener="#{controleDisciplina.dao.ultimo()}"
+                                         title="Ultimo"
+                                         icon="pi pi-step-forward" update="listagem"/>                        
+                    </p:panelGrid>
+                </div>
                 <p:dataTable value="#{controleDisciplina.dao.listaObjetos}" var="obj"
                              id="listagem">
+                    <f:facet name="footer">
+                        <p:outputLabel value="#{controleDisciplina.dao.mensagemNavegacao}"/>
+                    </f:facet>
                     <p:column headerText="ID" >
                         <p:outputLabel value="#{obj.id}"/>
                     </p:column>

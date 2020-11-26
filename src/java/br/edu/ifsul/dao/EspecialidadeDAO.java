@@ -7,6 +7,7 @@ package br.edu.ifsul.dao;
 
 import br.edu.ifsul.modelo.Disciplina;
 import br.edu.ifsul.modelo.Especialidade;
+import br.edu.ifsul.util.ConverterOrdem;
 import java.io.Serializable;
 import javax.ejb.Stateful;
 
@@ -19,5 +20,9 @@ public class EspecialidadeDAO<TIPO> extends GenericDAO<Especialidade> implements
     public EspecialidadeDAO(){
         super();
         classePersistente = Especialidade.class;
+        listaOrdem.add(new Ordem("id", "ID", "="));
+        listaOrdem.add(new Ordem("nome", "Nome", "like"));
+        ordemAtual = listaOrdem.get(1);
+        converterOrdem = new ConverterOrdem(listaOrdem);
     }
 }
