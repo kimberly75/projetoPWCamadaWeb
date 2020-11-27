@@ -36,9 +36,7 @@ public class ControleProduto implements Serializable {
     private ProdutoDAO<Produto> dao;
     @EJB
     private MarcaDAO<Marca> daoMarca;
-    @EJB
-    private ArquivoDAO<Arquivo> daoArquivo;
-
+    
     private Produto objeto;
 
     private Arquivo arquivo;
@@ -110,14 +108,6 @@ public class ControleProduto implements Serializable {
         this.daoMarca = daoMarca;
     }
 
-    public ArquivoDAO<Arquivo> getDaoArquivo() {
-        return daoArquivo;
-    }
-
-    public void setDaoArquivo(ArquivoDAO<Arquivo> daoArquivo) {
-        this.daoArquivo = daoArquivo;
-    }
-
     public Arquivo getArquivo() {
         return arquivo;
     }
@@ -169,11 +159,5 @@ public class ControleProduto implements Serializable {
 
     public void visualizarArquivo(int index) {
         arquivo = objeto.getArquivos().get(index);
-    }
-
-    public StreamedContent getArquivoDinamico() {
-        if (arquivo != null)
-            return new DefaultStreamedContent(new ByteArrayInputStream(arquivo.getArquivo()));
-        return new DefaultStreamedContent();
     }
 }

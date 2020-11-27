@@ -22,8 +22,7 @@
         <group>
             <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/src/java/br/edu/ifsul/controle/ControleProduto.java</file>
             <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/web/template/templateMenu.xhtml</file>
-            <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/src/java/br/edu/ifsul/controle/ControleArquivo.java</file>
-            <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/web/privado/teste/listarArquivo.xhtml</file>
+            <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/src/java/br/edu/ifsul/dao/ProdutoDAO.java</file>
             <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/web/privado/teste/listarProduto.xhtml</file>
         </group>
     </open-files>
