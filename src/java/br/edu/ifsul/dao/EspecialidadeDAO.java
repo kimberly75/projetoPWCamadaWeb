@@ -8,7 +8,9 @@ package br.edu.ifsul.dao;
 import br.edu.ifsul.modelo.Disciplina;
 import br.edu.ifsul.modelo.Especialidade;
 import br.edu.ifsul.util.ConverterOrdem;
+import br.edu.ifsul.util.JasperConfiguration;
 import java.io.Serializable;
+import java.util.HashMap;
 import javax.ejb.Stateful;
 
 /**

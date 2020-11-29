@@ -7,8 +7,10 @@ package br.edu.ifsul.controle;
 
 import br.edu.ifsul.dao.EspecialidadeDAO;
 import br.edu.ifsul.modelo.Especialidade;
+import br.edu.ifsul.util.JasperConfiguration;
 import br.edu.ifsul.util.UtilMessages;
 import java.io.Serializable;
+import java.util.HashMap;
 import javax.ejb.EJB;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
@@ -88,5 +90,9 @@ public class ControleEspecialidade implements Serializable {
 
     public void setObjeto(Especialidade objeto) {
         this.objeto = objeto;
+    }
+    
+    public void imprimir(){
+        JasperConfiguration.imprimeRelatorio("RelatorioEspecialidade", new HashMap(), dao.getListaTodos());
     }
 }
