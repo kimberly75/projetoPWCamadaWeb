@@ -20,13 +20,10 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/src/java/br/edu/ifsul/util/JasperConfiguration.java</file>
-            <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/src/java/br/edu/ifsul/controle/ControleEspecialidade.java</file>
-            <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/src/java/br/edu/ifsul/controle/ControleProduto.java</file>
+            <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/src/java/br/edu/ifsul/dao/PermissaoDAO.java</file>
             <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/web/template/templateMenu.xhtml</file>
-            <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/src/java/br/edu/ifsul/dao/EspecialidadeDAO.java</file>
-            <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/src/java/br/edu/ifsul/dao/GenericDAO.java</file>
-            <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/web/privado/teste/listarProduto.xhtml</file>
+            <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/web/privado/teste/listarCurso.xhtml</file>
+            <file>file:/C:/Users/kimberly.geremia/Documents/NetBeansProjects/projetoPWCamadaWeb/src/java/br/edu/ifsul/controle/ControleLogin.java</file>
         </group>
     </open-files>
 </project-private>
